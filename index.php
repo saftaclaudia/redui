@@ -23,8 +23,10 @@
 						<div class="input-border"></div>
 						<input type= "text" placeholder="Email address"/>
 					</div>
-					<input type="checkbox" id="remember"/><label for="remember"> Remember me</label>
-					<input type="checkbox" id="save-password"/><label for="save-password">Save Password</label>
+					<div class="submit-options">
+						<input type="checkbox" id="remember"/><label for="remember"> Remember me</label>
+						<input type="checkbox" id="save-password"/><label for="save-password">Save Password</label>
+					</div>
 					<input type="submit" value="SUBMIT"/>
 				</form>
 				
@@ -34,11 +36,11 @@
 						<div class="menu-head">MENU</div>
 					</div>
 					<ul class="menu-list">
-						<li><span class="profile"></span><a href="#">My Profile</a></li>
-						<li><span class="messages"></span><a href="#">Messages</a></li>
-						<li><span class="photos"></span><a href="#">My Photos <span class="nr-messages">10</span></a></li>
-						<li><span class="videos"></span><a href="#">My Videos</a></li>
-						<li><span class="settings"></span><a href="#">Settings</a></li>
+						<li><a href="#"><span class="profile"></span><p>My Profile</p></a></li>
+						<li><a href="#"><span class="messages"></span><p>Messages</p></a></li>
+						<li><a href="#"><span class="photos"></span><p>My Photos<span class="nr-messages">10</span></p></a></li>
+						<li><a href="#"><span class="videos"></span><p>My Videos</p></a></li>
+						<li><a href="#"><span class="settings"></span><p>Settings</p></a></li>
 					</ul>
 				</div>
 			
@@ -70,7 +72,9 @@
 							<div class="icon-password"></div>
 							<input type="password" name="psw" placeholder ="Password">
 						</div>
-						<input type="checkbox" id="remember-login"><label for="remember-login">Remember me</label>
+						<div class="login-options">
+							<input type="checkbox" id="remember-login"><label for="remember-login" class="checkbox-label">Remember me</label>
+						</div>
 						<input type="submit" value="LOGIN"/>
 					</div>
 				</form>
