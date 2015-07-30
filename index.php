@@ -3,7 +3,7 @@
 <head>
 	<link rel="stylesheet" type='text/css' href='assets/bootstrap.min.css'>
 	<link rel="stylesheet" type="textcss" href ="stylesheet.css">
-	<link type="text/css" rel="stylesheet" href="clearfix.css"/>
+	<link type="text/css" rel="stylesheet" href="assets/clearfix.css"/>
 	<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -53,15 +53,14 @@
 
 			<div class="right-content">
 				<form>
-					<div class="styled-select">
-						<select placeholder="Select a category">
-							<option>Mobile Phones</option>
-							<option>Android Phones</option>
-							<option>GSM Phones</option>
-							<option>Multi Sim Phones</option>
-							<option> Thablets</option>
-						</select>
-					</div>
+					<select  id="category" name="category">
+						<option value="">Select a category</option>
+						<option value="Mobile Phones">Mobile Phones</option>
+						<option value="Android Phones">Android Phones</option>
+						<option value="GSM Phones">GSM Phones</option>
+						<option value="Multi Sim Phones">Multi Sim Phones</option>
+						<option value="Thablets"> Thablets</option>
+					</select>
 
 					<div class="login">
 						<div class="input-wrapper ">
