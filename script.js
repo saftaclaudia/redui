@@ -8,7 +8,7 @@ $(document).ready(function(){
 	$(".menu").bind('mouseout', closeSubMenu);
 	function closeSubMenu(){
 		$(this).find('.menu-list').css('visibility','hidden');
-	};
+    };
 
     $('select').each(function () {
         var $this = $(this),
@@ -30,13 +30,14 @@ $(document).ready(function(){
         }
 
         var $listItems = $list.children('li');
+
         $styledSelect.click(function (e) {
             e.stopPropagation();
             $('div.styledSelect.active').each(function () {
                 $(this).removeClass('active').next('ul.options').hide();
             });
             $(this).toggleClass('active').next('ul.options').toggle();
-         });
+        });
 
         $listItems.click(function (e) {
             e.stopPropagation();
@@ -44,10 +45,10 @@ $(document).ready(function(){
             $this.val($(this).attr('rel'));
             $list.hide();
         });
-
         $(document).click(function () {
             $styledSelect.removeClass('active');
             $list.hide();
         });
     });
+
 });

@@ -12,7 +12,7 @@
 			<img src="images/logo-img.png">
 			<h1>RED<span>UI</span></h1>
 		</div>
-		<div class="content center-block">
+		<div class="content center-block clearfix">
 			<div class="left-content">
 				<form>
 					<div class="input-wrapper">
@@ -79,6 +79,32 @@
 				</form>
 			</div>
 		</div>
+
+		<ul class="timeline center-block">
+			<li>
+				<div class="left-timeline">
+					<div class="data">
+						<span class="day">30</span>
+						<span class="month">MAY</span>
+					</div>
+					<div class="circle"></div>
+				</div>
+				<div class="right-timeline">
+					<div class="timeline-message">
+						<div class="timeline-icon"></div>
+						<div class="message">
+							<h2>TIMOTHY</h2>
+							<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						</div>
+					</div>
+					<div class="reply-content">
+						<input type="text" placeholder="Reply... |" class="reply"/>
+						<input type="submit" value="" class="reply-send"/>
+					</div>
+				</div>
+			</li>
+		</ul>
+		
 	</div>
 	<script type='text/javascript' src= 'assets/jquery-1.11.1.min.js'></script>
 	<script type='text/javascript' src= 'assets/bootstrap.min.js'></script>
