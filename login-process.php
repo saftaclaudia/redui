@@ -14,8 +14,9 @@
 
 	if(!$db_selected){
 		die('Con\'t use' . DB_NAME . ":" . mysql_error());
-	}
+	};
 	$err="";
+	$success="";
 
 	if (isset($_POST['email']) and isset($_POST['password'])){
 		$useremail = $_POST['email'];
@@ -29,13 +30,17 @@
 		} else{
 			echo "Invalid Login email or password.";
 			$err="Invalid Login email or password";
+			header('Location: index.php?err='.$err .$success);
 		}
 		if (isset($_SESSION['email'])){
 			$useremail=$_SESSION['email'];
-			echo "Hai $useremail";
+			$success="Hai $useremail";
+			header('Location: account.php?err='.$err .$success);
 		}
 	}
-	header('Location: index.php');
+	
+	
+	
 	mysql_close();
 
 	die();

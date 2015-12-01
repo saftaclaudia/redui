@@ -12,6 +12,9 @@
 	<div class= "wrapper center-block">
 		<?php 
 			require('includes/header.php');
+			if(isset($_GET['err'])){
+					echo '<p class="error">'. $_GET['err'] .'</p>';
+			};
 		?>
 		<div class="content center-block">
 			<form action="login-process.php" method="post" class="center-block">
