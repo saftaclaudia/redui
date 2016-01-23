@@ -43,24 +43,29 @@
 
 		if(empty($_POST['username'])){
 			$err ="Name is required";
+			return false;
 		}
-		else{
-			if(empty($_POST['email'])){
-				$err ="Email is required";
-			}
-			$email = $_POST['email'];
-			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-				$err ="Email is invalid";
-			}
-			if(empty($_POST['password'])){
-				$err ="Password is required";
-			}
-			if(empty($_POST['confirmpassword'])){
-				$err ="Confirm password in required";
-			}
-			if ($_POST['password'] != $_POST['confirmpassword']){
-				$err ="Error passwors do nott match";
-			}
+	
+	 	if(empty($_POST['email'])){
+			$err ="Email is required";
+			return false;
+		}
+		$email = $_POST['email'];
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			$err ="Email is invalid";
+			return false;
+		}
+		if(empty($_POST['password'])){
+			$err ="Password is required";
+			return false;
+		}
+		if(empty($_POST['confirmpassword'])){
+			$err ="Confirm password in required";
+			return false;
+		}
+		if ($_POST['password'] != $_POST['confirmpassword']){
+			$err ="Error passwors do nott match";
+			return false;
 		}
 
 		if($err==""){

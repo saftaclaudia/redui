@@ -13,6 +13,10 @@
 		<?php
 			require('includes/header.php');
 		?>
+
+
+		<a href="logout.php" class="logout center-block">Logout here</a>
+		
 		<div class="content-formelements center-block clearfix">
 			<div class="left-content">
 				<div class="menu">
@@ -28,7 +32,7 @@
 						<li><a href="#"><span class="settings"></span><p>Settings</p></a></li>
 					</ul>
 				</div>
-				<form class="options" action="options.php" method="post">
+				<form class="optionsradio" action="options.php" method="post">
 					<input type="radio" name="option" id="design"/><label for ="design">Design</label>
 					<input type="radio" name="option" id="development"/><label for ="development">Development</label>
 					<input type="radio" name="option" id="management"/><label for ="management">Management</label>

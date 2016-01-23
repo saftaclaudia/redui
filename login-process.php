@@ -24,23 +24,18 @@
 		$query ="SELECT * FROM users WHERE email='$useremail' and password='$pass'";
 		$result=mysql_query($query) or die (mysql_error());
 		$count=mysql_num_rows($result);
-
 		if($count==1){
 			$_SESSION['email']= $useremail;
 		} else{
-			echo "Invalid Login email or password.";
 			$err="Invalid Login email or password";
-			header('Location: index.php?err='.$err .$success);
+			header('Location: index.php?err='.$err );
 		}
 		if (isset($_SESSION['email'])){
 			$useremail=$_SESSION['email'];
 			$success="Hai $useremail";
-			header('Location: account.php?err='.$err .$success);
+			header('Location: account.php?err='.$success);
 		}
 	}
-	
-	
-	
 	mysql_close();
 
 	die();
