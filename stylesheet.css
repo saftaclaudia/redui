@@ -7,7 +7,7 @@
 	color: #ffffff;
 	font-family:'Pontano Sans', sans-serif;
 	font-size: 18px; 
-	text-align: center;
+	text-align: center;loginlink
 	margin-top: 20px;
 }
 
@@ -437,7 +437,20 @@ input[type="submit"].reply-send{
     color: #909090;
     text-decoration: none;
 }
-
+.loginlink{
+	font-family: 'Pontano Sans', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    display: inherit;
+}
+.loginlink:hover, .loginlink:focus {
+    color: #909090;
+    text-decoration: none;
+}
 
 
 
