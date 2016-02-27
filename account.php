@@ -8,15 +8,11 @@
 	?>
 </head>
 <body>
-	
-	<div class= "wrapper center-block">
+	<div class= "wrapper center-block clearfix">
+		<a href="logout.php" class="logout">Logout here</a>
 		<?php
 			require('includes/header.php');
 		?>
-
-
-		<a href="logout.php" class="logout center-block">Logout here</a>
-		
 		<div class="content-formelements center-block clearfix">
 			<div class="left-content">
 				<div class="menu">
@@ -38,7 +34,6 @@
 					<input type="radio" name="option" id="management"/><label for ="management">Management</label>
 				</form>
 			</div>
-
 			<div class="right-content">
 				<select id="category" name="category">
 					<option value="">Select a category</option>
@@ -50,7 +45,6 @@
 				</select>
 			</div>
 		</div>
-
 		<ul class="timeline center-block">
 			<li>
 				<div class="left-timeline">
@@ -75,7 +69,6 @@
 				</div>
 			</li>
 		</ul>
-		
 	</div>
 	<?php
 		require('includes/footer.php');

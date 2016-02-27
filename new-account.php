@@ -11,11 +11,7 @@
 	<div class= "wrapper center-block">
 		<?php
 			require('includes/header.php');
-			if (isset($_GET['err'])) {
-				echo '<p class="error">'. $_GET['err'] .'</p>';
-			};
 		?>
-		
 		<div class="content center-block">
 			<form action="new-account-process.php" method="post">
 				<div class="input-wrapper">
@@ -36,12 +32,17 @@
 					<input type="password"  placeholder ="Confirm Password" name="confirmpassword" class="input-border-styled"/>
 				</div>
 				<input type="submit" value="CREATE ACCOUNT" name="signup"/>
+				<input type="submit" value="LOGIN" name="submit"/>
 			</form>
 		</div>
+		<?php
+			if(isset($_GET['err'])) {
+				echo '<p class="error">'. $_GET['err'] .'</p>';
+			};
+		?>
 	</div>
 	<?php 
 		require('includes/footer.php');
 	?>
-
 </body>
 </html>

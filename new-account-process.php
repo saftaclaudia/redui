@@ -40,6 +40,7 @@
 	function SignUp(){
 		global $err;
 		global $userexist;
+		global $success;
 
 		if(empty($_POST['username'])){
 			$err ="Name is required";
@@ -87,8 +88,7 @@
 		SignUp();
 	}
 
-	header('Location: new-account.php?err='.$err .$success .$userexist);
-
+	header('Location: new-account.php?err='.$err .$userexist .$success);
 
 	mysql_close();
 

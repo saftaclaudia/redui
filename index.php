@@ -7,14 +7,9 @@
 	?>
 </head>
 <body>
-
-	
 	<div class= "wrapper center-block">
 		<?php 
 			require('includes/header.php');
-			if(isset($_GET['err'])){
-					echo '<p class="error">'. $_GET['err'] .'</p>';
-			};
 		?>
 		<div class="content center-block">
 			<form action="login-process.php" method="post" class="center-block">
@@ -27,17 +22,18 @@
 					<input type="password" placeholder ="Password" name="password" class="input-icon-styled"/>
 				</div>
 				<input type="submit" value="LOGIN" name="submit"/>
-
 			</form>
-			
+			<?php
+				if(isset($_GET['err'])){
+					echo '<p class="error">'. $_GET['err'] .'</p>';
+				};
+			?>
 			<a href="new-account.php" class="styled-link">NEW ACCOUNT</a>
 		</div>
 	</div>
-
 	<?php
 		require ('includes/footer.php');
 	?>
-
 </body>
 </html>
 
