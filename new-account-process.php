@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	define('DB_NAME' , 'redui');
 	define('DB_USER' , 'root');
 	define('DB_PASSWORD', '');
@@ -19,6 +20,10 @@
 	$err = "";
 	$success="";
 	$userexist="";
+	$_SESSION["username"]=$_POST['username'];
+	$_SESSION["email"]=$_POST['email'];
+	$_SESSION["password"]=$_POST['password'];
+	$_SESSION["confirmpassword"]=$_POST['confirmpassword'];
 
 	function NewUser(){
 		global $success;
@@ -35,6 +40,7 @@
 		else {
 			die('Error :' . mysql_error());
 		}
+
 	}
 
 	function SignUp(){

@@ -1,4 +1,9 @@
-
+<?php
+	session_start();
+	if($_SESSION["isAuth"]!="true"){
+		header('Location: index.php');
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>

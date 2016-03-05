@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	define('DB_NAME' , 'redui');
 	define('DB_USER' , 'root');
 	define('DB_PASSWORD', '');
@@ -17,7 +18,7 @@
 	};
 	$err="";
 	$success="";
-
+	
 	if (isset($_POST['email']) and isset($_POST['password'])){
 		$useremail = $_POST['email'];
 		$pass= md5($_POST['password']);
@@ -25,7 +26,7 @@
 		$result=mysql_query($query) or die (mysql_error());
 		$count=mysql_num_rows($result);
 		if($count==1){
-			$_SESSION['email']= $useremail;
+			 $_SESSION['email']= $useremail;
 		} else{
 			$err="Invalid Login email or password";
 			header('Location: index.php?err='.$err );
@@ -33,6 +34,7 @@
 		if (isset($_SESSION['email'])){
 			$useremail=$_SESSION['email'];
 			$success="Hai $useremail";
+			$_SESSION["isAuth"]="true"; 
 			header('Location: account.php?err='.$success);
 		}
 	}
